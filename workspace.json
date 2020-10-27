@@ -9,37 +9,15 @@
       "schematics": {},
       "architect": {
         "build": {
-          "builder": "@nrwl/node:build",
+          "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "outputPath": "dist/apps/some-app",
-            "main": "apps/some-app/src/main.ts",
-            "tsConfig": "apps/some-app/tsconfig.app.json",
-            "assets": ["apps/some-app/src/assets"]
-          },
-          "configurations": {
-            "production": {
-              "optimization": true,
-              "extractLicenses": true,
-              "inspect": false,
-              "fileReplacements": [
-                {
-                  "replace": "apps/some-app/src/environments/environment.ts",
-                  "with": "apps/some-app/src/environments/environment.prod.ts"
-                }
-              ]
-            }
+            "command": "mvn -f ./apps/some-app/pom.xml -ff -T 3C install -Pconf -Ddir=../../dist/apps/some-app/"
           }
         },
         "serve": {
-          "builder": "@nrwl/node:execute",
+          "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "buildTarget": "some-app:build"
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": ["apps/some-app/**/*.ts"]
+            "command": "mvn -f ./apps/some-app/pom.xml -ff -T 3C install -Pconf -Ddir=../../dist/apps/some-app/"
           }
         },
         "test": {
