@@ -17,14 +17,13 @@
         "serve": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "command": "mvn -f ./apps/some-app/pom.xml -ff -T 3C install -Pconf -Ddir=../../dist/apps/some-app/"
+            "command": "nodemon -e java,xml --watch \"apps/some-app/**\"  --exec \"mvn -f ./apps/some-app/pom.xml -ff spring-boot:run -Pconf -Ddir=../../dist/apps/some-app/\""
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "jestConfig": "apps/some-app/jest.config.js",
-            "passWithNoTests": true
+            "command": "mvn -f ./apps/some-app/pom.xml -ff -T 3C test -Pconf -Ddir=../../dist/apps/some-app/"
           }
         }
       }
