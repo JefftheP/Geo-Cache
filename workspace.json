@@ -25,6 +25,12 @@
           "options": {
             "command": "mvn -f ./apps/some-app/pom.xml -ff -T 3C test -Pconf -Ddir=../../dist/apps/some-app/"
           }
+        },
+        "run": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "echo 'Find some way to turn this dynamic' && java -jar ./dist/apps/some-app/demo-0.0.1-SNAPSHOT.jar"
+          }
         }
       }
     }
