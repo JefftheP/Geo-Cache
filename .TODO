@@ -1,12 +1,19 @@
 Research Topics:
+    # Diagram the cloudformation on this when research is done
+    # https://us-east-2.console.aws.amazon.com/cloudformation/designer/home?region=us-east-2#
+    
+    # Set Up Admin level account for CLI
+    # Set up an account Alias - https://jeffthe-root.signin.aws.amazon.com/console
+    
+    AWS Networking Fundamentals:
+        ☐ Look into setting up VPCs, Subnets, VPC Peering, and Private Hostname resolutions
 
     Route53:
         ☐ What is the minimum of moving parts/resources
 
     CloudFront :
         ☐ What is the minimum of moving parts/resources
-        ☐ Internal CDN/Cloudfront
-
+     
     API Gateway V2:
         ☐ What is the minimum of moving parts/resources
 
@@ -33,3 +40,6 @@ Research Topics:
 
     CloudWatch:
         ☐ What is the minimum of moving parts/resources
+
+    AWS CodeCommit:
+        ☐ Look into what this is and if there's a use
