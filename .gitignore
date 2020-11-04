@@ -37,3 +37,10 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+# CDK asset staging directory
+.cdk.staging
+cdk.out
+
+# Parcel default cache directory
+.parcel-cache
