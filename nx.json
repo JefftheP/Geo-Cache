@@ -25,6 +25,9 @@
   "projects": {
     "some-app": {
       "tags": []
+    },
+    "aws-infrastruture": {
+      "tags": []
     }
   }
 }

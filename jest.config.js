@@ -1,3 +1,3 @@
 module.exports = {
-  projects: ['<rootDir>/apps/some-app'],
+  projects: ['<rootDir>/apps/some-app', '<rootDir>/apps/aws-infrastruture'],
 };
