@@ -17,12 +17,12 @@ OS name: "windows 10", version: "10.0", arch: "amd64", family: "windows"
 
 ```
 $ node --version
-v15.0.1
+v14.15.0
 ```
 
 ```
 $ npm -v
-7.0.3
+6.14.8
 ```
 
 This project was generated using [Nx](https://nx.dev).
