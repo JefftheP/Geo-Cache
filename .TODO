@@ -20,26 +20,35 @@ Research Topics:
     AWS Load Balancer:
         ☐ What is the minimum of moving parts/resources
 
+    ACM:
+        ☐ Going to need certs
+
     ECR:
         ☐ What is the minimum of moving parts/resources
 
     ECS:
         ☐ What is the minimum of moving parts/resources
 
+    IAM:
+        ☐ Figure out how many roles/accesses I need
+
     Dynamo:
         ☐ What is the minimum of moving parts/resources
 
     S3:
-        ☐ What is the minimum of moving parts/resources
+        ☐ Private S3 Bucket(s) with only cloudfront instance Origin Access Identity
 
     S3 Glacier:
         ☐ What is the minimum of moving parts/resources
 
-    AWS Lamda Java:
+    AWS Lambda Java:
         ☐ What is the minimum of moving parts/resources
 
     CloudWatch:
-        ☐ What is the minimum of moving parts/resources
+        ☐ Set up log streams
+        ☐ Set up Dashboard
+        ☐ Set up log widgets
+        ☐ Set up log metrics
 
     AWS CodeCommit:
-        ☐ Look into what this is and if there's a use
+        ✔ Look into what this is and if there's a use @done(21-05-19 22:07) | Nah its overkill fuck that
