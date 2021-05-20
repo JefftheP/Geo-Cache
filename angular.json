@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "projects": {
+    "some-app": {
+      "root": "apps/some-app",
+      "sourceRoot": "apps/some-app/src",
+      "projectType": "application",
+      "prefix": "some-app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "mvn -f ./apps/some-app/pom.xml -ff -T 3C install -Pconf -Ddir=../../dist/apps/some-app/"
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "nodemon -e java,xml --watch \"apps/some-app/**\"  --exec \"mvn -f ./apps/some-app/pom.xml -ff spring-boot:run -Pconf -Ddir=../../dist/apps/some-app/\""
+          }
+        },
+        "test": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "mvn -f ./apps/some-app/pom.xml -ff -T 3C test -Pconf -Ddir=../../dist/apps/some-app/"
+          }
+        },
+        "run": {
+          "builder": "@nrwl/workspace:run-commands",
+          "options": {
+            "command": "echo 'Find some way to turn this dynamic' && java -jar ./dist/apps/some-app/demo-0.0.1-SNAPSHOT.jar"
+          }
+        }
+      }
+    },
+    "aws-infrastruture": {
+      "root": "apps/aws-infrastruture",
+      "sourceRoot": "apps/aws-infrastruture/src",
+      "projectType": "application",
+      "prefix": "aws-infrastruture",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@nrwl/node:build",
+          "options": {
+            "outputPath": "dist/apps/aws-infrastruture",
+            "main": "apps/aws-infrastruture/src/main.ts",
+            "tsConfig": "apps/aws-infrastruture/tsconfig.app.json",
+            "assets": ["apps/aws-infrastruture/src/assets"]
+          },
+          "configurations": {
+            "production": {
+              "optimization": true,
+              "extractLicenses": true,
+              "inspect": false,
+              "fileReplacements": [
+                {
+                  "replace": "apps/aws-infrastruture/src/environments/environment.ts",
+                  "with": "apps/aws-infrastruture/src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@nrwl/node:execute",
+          "options": {
+            "buildTarget": "aws-infrastruture:build"
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": ["apps/aws-infrastruture/**/*.ts"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/aws-infrastruture/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/node"
+  },
+  "defaultProject": "some-app"
+}
