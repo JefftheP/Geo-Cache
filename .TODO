@@ -5,6 +5,8 @@ Research Topics:
     # Set Up Admin level account for CLI
     # Set up an account Alias - https://jeffthe-root.signin.aws.amazon.com/console
     
+
+    #https://docs.aws.amazon.com/cdk/api/latest/docs/aws-s3-assets-readme.html
     AWS Networking Fundamentals:
         ☐ Look into setting up VPCs, Subnets, VPC Peering, and Private Hostname resolutions
 

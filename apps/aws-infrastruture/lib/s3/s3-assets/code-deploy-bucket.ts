@@ -6,8 +6,8 @@ import {
 } from '@aws-cdk/aws-s3';
 import { Construct } from '@aws-cdk/core';
 
-const BucketName = 'GeoCacheDeepStore';
-export class GeoCacheDeepStoreBucket extends Bucket {
+const BucketName = 'CodeDeployBucket';
+export class GeoCacheCodeDeployAssetBucket extends Bucket {
   constructor(
     scope: Construct,
     id: string = BucketName,
