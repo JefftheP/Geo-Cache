@@ -11,7 +11,7 @@ export class GeoCacheS3Stack extends Stack {
   deepStoreBucket: Bucket;
   assetBucket: Bucket;
   codeDeployBucket: Bucket;
-  
+
   constructor(
     scope?: Construct,
     id: string = StackName,
