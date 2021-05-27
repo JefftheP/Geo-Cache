@@ -7,3 +7,4 @@ export * from './gateway-stack';
 export * from './iam-stack';
 export * from './log-stack';
 export * from './s3-stack';
+export * from './ecs-task-stack';

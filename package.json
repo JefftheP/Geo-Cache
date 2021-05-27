@@ -53,8 +53,10 @@
   "dependencies": {
     "@aws-cdk/aws-apigateway": "^1.105.0",
     "@aws-cdk/aws-apigatewayv2-authorizers": "^1.105.0",
+    "@aws-cdk/aws-apigatewayv2-integrations": "^1.106.1",
     "@aws-cdk/aws-certificatemanager": "^1.105.0",
     "@aws-cdk/aws-cloudfront": "^1.105.0",
+    "@aws-cdk/aws-cloudfront-origins": "^1.106.1",
     "@aws-cdk/aws-cloudwatch": "^1.105.0",
     "@aws-cdk/aws-dynamodb": "^1.105.0",
     "@aws-cdk/aws-dynamodb-global": "^1.105.0",
