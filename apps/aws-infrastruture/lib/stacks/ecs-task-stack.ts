@@ -1,16 +1,12 @@
-import { FargateTaskDefinition } from '@aws-cdk/aws-ecs';
 import { DockerImageFunction } from '@aws-cdk/aws-lambda';
-import { Construct, Stack, StackProps } from '@aws-cdk/core';
-import { ECRStack, LogStack } from 'apps/aws-infrastruture/types';
+import { Construct, StackProps } from '@aws-cdk/core';
+import { ECRStack, LogStack, TaskStack } from 'apps/aws-infrastruture/types';
 import { GeoCacheDeletionLambda } from '../lambda/deletion-lambda';
 import { GeoCacheQueryTask, GeoCacheUserTask } from '../services';
 import { GeoCacheUploadTask } from '../services/upload-service';
 
-export class GeoCacheECSTaskStack extends Stack {
+export class GeoCacheECSTaskStack extends TaskStack {
   deletionLambda: DockerImageFunction;
-  userTask: FargateTaskDefinition;
-  queryTask: FargateTaskDefinition;
-  uploadTask: FargateTaskDefinition;
 
   constructor(
     scope?: Construct,
