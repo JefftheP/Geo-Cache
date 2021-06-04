@@ -4,7 +4,9 @@ import { Construct } from '@aws-cdk/core';
 export class GeoCacheDNS extends PublicHostedZone {
   constructor(scope: Construct) {
     const id: string = '',
-      props: PublicHostedZoneProps = null;
+      props: PublicHostedZoneProps = {
+        zoneName: null,
+      };
     super(scope, id, props);
   }
 }
