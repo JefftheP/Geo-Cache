@@ -1,6 +1,6 @@
 import { FargateService } from '@aws-cdk/aws-ecs';
 import { Construct, StackProps } from '@aws-cdk/core';
-import { ClusterStack, ECRStack, TaskStack } from '../../types';
+import { ClusterStack, ECRStack, TaskStack, VPCStack } from '../../types';
 import { GeoCacheCluster } from '../cluster';
 import { GeoCacheQueryService, GeoCacheUserService } from '../services';
 import { GeoCacheUploadService } from '../services/upload-service';
@@ -12,6 +12,7 @@ export class GeoCacheECSContainerStack extends ClusterStack {
   constructor(
     scope?: Construct,
     taskStack: TaskStack = scope as TaskStack,
+    vpcStack: VPCStack = scope as VPCStack,
     id?: string,
     props?: StackProps,
     ecrStack?: ECRStack
