@@ -6,7 +6,7 @@ export class GeoCacheDeletionLambdaRole extends Role {
     scope: Construct,
     id: string = '',
     props: RoleProps = {
-      assumedBy: null,
+      assumedBy: new ServicePrincipal('ecs-tasks.amazonaws.com'),
       managedPolicies: [],
     }
   ) {

@@ -1,4 +1,4 @@
-import { Role, RoleProps } from '@aws-cdk/aws-iam';
+import { Role, RoleProps, ServicePrincipal } from '@aws-cdk/aws-iam';
 import { Construct } from '@aws-cdk/core';
 
 export class GeoCacheQueryServiceRole extends Role {
@@ -6,7 +6,7 @@ export class GeoCacheQueryServiceRole extends Role {
     scope: Construct,
     id: string = '',
     props: RoleProps = {
-      assumedBy: null,
+      assumedBy: new ServicePrincipal('ecs-tasks.amazonaws.com'),
       managedPolicies: [],
     }
   ) {
