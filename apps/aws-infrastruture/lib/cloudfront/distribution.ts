@@ -8,7 +8,7 @@ export class GeoCacheCloudfrontDistribution extends Distribution {
     id: string = DistributionName,
     props: DistributionProps = {
       defaultBehavior: {
-        origin: null,
+        origin: null, // TODO Need an origin DNS to point to
       },
     }
   ) {

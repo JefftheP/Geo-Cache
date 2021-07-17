@@ -4,9 +4,9 @@ import { Construct } from '@aws-cdk/core';
 export class GeoCacheCertificates extends Certificate {
   constructor(
     scope: Construct,
-    id: string = '',
+    id: string = 'GeoCacheCertificates',
     props: CertificateProps = {
-      domainName: null,
+      domainName: null, // TODO Need domain name
     }
   ) {
     super(scope, id, props);

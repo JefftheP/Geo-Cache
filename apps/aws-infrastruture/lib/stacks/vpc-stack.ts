@@ -24,7 +24,7 @@ export class GeoCacheVPCStack extends VPCStack {
     super(scope, id, props);
     this.vpc = new GeoCacheCloud(this);
     this.userLoadBalancer = new GeoCacheUserLoadBalancer(this);
-    this.uploadLoadBalancer = new GeoCacheUploadLoFFadBalancer(this);
+    this.uploadLoadBalancer = new GeoCacheUploadLoadBalancer(this);
     this.queryLoadBalancer = new GeoCacheQueryLoadBalancer(this);
   }
 }

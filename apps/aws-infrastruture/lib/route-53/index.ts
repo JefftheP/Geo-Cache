@@ -1,1 +1,1 @@
-export * from './dns';
+export * from './external-hosted-zone';

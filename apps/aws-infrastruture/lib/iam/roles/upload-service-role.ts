@@ -4,7 +4,7 @@ import { Construct } from '@aws-cdk/core';
 export class GeoCacheUploadServiceRole extends Role {
   constructor(
     scope: Construct,
-    id: string = '',
+    id: string = 'GeoCacheUploadServiceRole',
     props: RoleProps = {
       assumedBy: new ServicePrincipal('ecs-tasks.amazonaws.com'),
       managedPolicies: [],

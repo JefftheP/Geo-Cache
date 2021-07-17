@@ -4,7 +4,7 @@ import { Construct } from '@aws-cdk/core';
 export class GeoCacheDeletionLambdaRole extends Role {
   constructor(
     scope: Construct,
-    id: string = '',
+    id: string = 'GeoCacheDeletionLambdaRole',
     props: RoleProps = {
       assumedBy: new ServicePrincipal('ecs-tasks.amazonaws.com'),
       managedPolicies: [],
